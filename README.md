@@ -1,6 +1,6 @@
 # Visualisation Group Work
 
-A group-work exercise for practising data visualisation in Python. Working in small groups, you recreate the same chart in several plotting libraries so you can compare their syntax and results side by side. The datasets cover Seattle weather and US airport locations. The full brief, including group assignments, lives in the [task file](2-visualisation-task.md).
+A group-work exercise for practising data visualisation in Python. Working in small groups, you recreate the same chart in several plotting libraries so you can compare their syntax and results side by side. The datasets cover Seattle weather and US airport locations. The full brief, including group assignments, lives in the [task file](1-visualisation-task.md).
 
 ## Learning Objectives
 
@@ -97,6 +97,14 @@ code .
 ```
 
 Then open `2-visualisation-template.ipynb` and select the Python environment created by `uv sync` as the kernel.
+
+## My work
+
+- **Done solo**: this is group work, but I worked through it alone, so there was no team and no other group to swap notebooks with.
+- **Group 2 (line plot, Seattle weather)** in [`2-visualisation-template.ipynb`](2-visualisation-template.ipynb): average daily maximum and minimum temperature per calendar month, built in Matplotlib, Seaborn and Plotly with the same colour-blind safe colours (Okabe-Ito blue and vermillion). Plus a Seaborn version that averages the raw days itself and draws 95 % confidence bands, and a comparison table of the three libraries. My own September 2026 draft was the start; its missing data steps (`monthly_long`, the data import) are now in place, so the notebook runs top to bottom.
+- **Solo extension, the other groups' charts**: Group 1 scatter (warm nights come with warm days, r = 0.88), Group 3 bar (rain per month: November wettest, July driest) plus a bar chart that shows the `weather` labels changed over the years (use `precipitation`, not the label), Group 4 maps (Plotly dot map and airports-per-state choropleth, plus a Matplotlib x/y version for comparison).
+- Plotly charts are stored twice: interactive in Jupyter and as a PNG copy that GitHub can show (`pio.renderers.default = "plotly_mimetype+png"`, needs `kaleido`, added to `pyproject.toml`).
+- Claude finished the notebook in a delegated pass on 2026-11-26; owner review pending.
 
 ## References & Further Reading
 
